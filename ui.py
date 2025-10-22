@@ -15,7 +15,7 @@ class View(QWidget):
         self.te1 = QPlainTextEdit()
         self.te1.setReadOnly(True)
 
-        self.btn1 = QPushButton('Message', self)
+        self.btn1 = QPushButton('Calc', self)
         # self.btn1.clicked.connect(self.activateMessage)
 
         self.btn2 = QPushButton('Clear', self)
@@ -24,6 +24,8 @@ class View(QWidget):
         # 라인 에디트 문자열 배치 설정
         self.le1 = QLineEdit('0', self)
         self.le1.setAlignment(QtCore.Qt.AlignRight)
+        self.le1.setFocus(True)
+        self.le1.selectAll()
 
         self.le2 = QLineEdit('0', self)
         self.le2.setAlignment(QtCore.Qt.AlignRight)
@@ -58,7 +60,7 @@ class View(QWidget):
         self.resize(256, 256)
         self.show()
 
-    def activateMessage(self):
+    def setDisplay(self):
         # QMessageBox.information(self, "information", "Button Clicked")
         self.te1.appendPlainText("Button clicked!")
     
