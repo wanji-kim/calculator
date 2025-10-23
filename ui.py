@@ -32,7 +32,7 @@ class View(QWidget):
 
         # 콤보 박스 항목 추가 (연산자로 사용)
         self.cb = QComboBox(self)
-        self.cb.addItems(['+', '-', '*', '/', '^', '%'])
+        self.cb.addItems(['+', '-', '*', '/'])
 
         # 새로 정의한 위젯을 QHBoxLayout에 배치
         hbox_formular = QHBoxLayout()
